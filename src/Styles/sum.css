@@ -1,0 +1,25 @@
+*{
+    color:blue;
+    text-align: center;
+    justify-content: center;
+}
+table, thead,tbody ,th {
+    margin-left: 40%;
+    border: 1px solid black;
+    padding: 5px;
+    }
+.listclass{
+    background-color:blanchedalmond;
+    padding:20px;
+    
+}
+.listclass button{
+    padding: 7px;
+    margin: 7px;
+}
+#todolist{
+    margin-left: 35%;
+    width:400px;
+}
+li{
+list-style: none;}
