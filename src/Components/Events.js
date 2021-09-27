@@ -9,6 +9,9 @@ export class Events extends Component {
         let {name,value}=event.target;
         this.setState({[name]:value});
     }
+    componentWillUnmount=()=>{
+        alert("unmountData")
+    }
     render() {
         return (
             <div>

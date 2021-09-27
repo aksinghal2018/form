@@ -6,7 +6,7 @@ class Myclass extends Component{
 
     constructor(props){
         super(props);
-        this.state={name:"anuj",age:34,counter:0};
+        this.state={name:"anuj",age:34,counter:0,display:true};
     }
     updateData=()=>{
         this.setState({name:"sumit"});
@@ -14,7 +14,27 @@ class Myclass extends Component{
     updateCounter=()=>{
         this.setState({counter:this.state.counter+1});
     }
+    componentDidMount=()=>{
+        if(this.state.name!="anuj"){
+            alert(this.state.age);
+        }
+    }
+    componentDidUpdate=()=>{
+        if(this.state.name!="anuj"){
+            alert("name change");
+        }
+    }
+    componentWillUnmount=()=>{
+        alert("unmountData")
+    }
+    delete=()=>{
+        this.setState({display:false});
+    }
     render(){
+        let comp;
+        if(this.state.display){
+            comp=<Events />
+        }
         return(
             <div>
                 <h1>
@@ -23,7 +43,9 @@ class Myclass extends Component{
                 <p>{this.state.counter}</p>
                 <Button label="update data" action={this.updateData}/>
                 <Button label="click" action={this.updateCounter}/>
-                <Events />
+                <Button label="Delete" action={this.delete}/>
+                {comp}
+                {/*<Events />*/}
                 
             </div>
         )

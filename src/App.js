@@ -7,6 +7,7 @@ import Sumclass from './Components/Sumclass';
 import Person from './Components/Person';
 import Login from './Components/Login';
 import { Todo } from './Components/Todo';
+import ValidationForm from './Components/ValidationForm';
 function App() {
   // const title ="NeoSoftTechnologies";
   // const latestTechnilogies=["React","Angular","Node Js"];
@@ -25,7 +26,8 @@ function App() {
   //}
   return (
     <div className="App">
-      <Todo />
+      <ValidationForm />
+      {/* <Todo /> */}
       {/* <ul>
         {latestTechnilogies.map((lat,ind)=>
         <li key={ind}>{lat}</li>
